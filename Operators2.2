@@ -1,0 +1,37 @@
+package com.gmail.yuliasolnechnaya;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int xa = 0;
+		int ya = 0;
+		int xb = 4;
+		int yb = 4;
+		int xc = 6;
+		int yc = 1;
+		int x;
+		int y;
+		int p1;
+		int p2;
+		int p3;
+		System.out.println("Введите х");
+		x = sc.nextInt();
+		System.out.println("Введите y");
+		y = sc.nextInt();
+		p1 = (xa - x) * (yb - ya) - (xb - xa) * (ya - y);
+		p2 = (xb - x) * (yc - yb) - (xc - xb) * (yb - y);
+		p3 = (xc - x) * (ya - yc) - (xa - xc) * (yc - y);
+		if (p1 >= 0 && p2 > 0 && p3 >= 0) {
+			System.out.println("Точка внyри треyгольника");
+		} else if (p1 <= 0 && p2 < 0 && p3 <= 0) {
+			System.out.println("Точка внyри треyгольника");
+		} else {
+			System.out.println("Точка не внyри треyгольника");
+		}
+
+	}
+}
