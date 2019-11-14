@@ -1,0 +1,25 @@
+package com.gmail.yuliasolnechnaya;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int r = 4;
+		int x;
+		int y;
+
+		System.out.println("Введите x");
+		x = sc.nextInt();
+		System.out.println("Введите y");
+		y = sc.nextInt();
+		if ((x * x + y * y) < Math.PI * r * r) {
+			System.out.println("Координаты точки внутри круга");
+		} else {
+			System.out.println("Координаты точки не находятся внутри круга");
+
+		}
+	}
+}
