@@ -1,0 +1,24 @@
+package com.gmail.yuliasolnechnaya;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+
+		int a;
+		System.out.println("Введите год");
+		a = sc.nextInt();
+		if (a % 100 != 0 && a % 4 == 0) {
+			System.out.println("Это высокосный год, в нем 366 дней");
+		} else if (a % 400 == 0) {
+			System.out.println("Это высокосный год, в нем 366 дней");
+
+		} else {
+			System.out.println("Это не высокосный год, в нем 365 дней");
+		}
+
+	}
+}
