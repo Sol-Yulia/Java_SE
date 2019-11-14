@@ -1,0 +1,37 @@
+package com.gmail.yuliasolnechnaya;
+
+import java.util.Scanner;
+
+public class Main1 {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Количество квартир на этаже: ");
+		int flatsPerFloor = sc.nextInt();
+
+		System.out.print("Количество этажей в доме: ");
+		int numberOfFloors = sc.nextInt();
+
+		System.out.print("Количество подъездов в доме: ");
+		int numberOfEntrance = sc.nextInt();
+
+		System.out.print("А теперь, пожалуйста, введите номер квартиры: ");
+		int flatNumber = sc.nextInt();
+
+		int flatQuantity = flatsPerFloor * numberOfFloors * numberOfEntrance;
+
+		if ((flatNumber > 0) && (flatNumber <= flatQuantity)) {
+			int floorCoefficient = (flatNumber - 1) / flatsPerFloor + 1;
+			int floorNumber = (floorCoefficient - 1) % numberOfFloors + 1;
+			int entranceNumber = (floorCoefficient - 1) / numberOfFloors + 1;
+			System.out.println("Квартира находится на " + floorNumber + " этаже, " + entranceNumber + " подъезд.");
+		} else {
+			System.out.println("Квартиры с таким номером не существует в этом доме.");
+			System.out.println("Пожалуйста, попробуйте еще раз.");
+		}
+
+	}
+
+}
